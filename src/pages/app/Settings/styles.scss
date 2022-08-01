@@ -1,0 +1,17 @@
+@import '../../../defaultStyles/Colors.scss';
+@import '../../../defaultStyles/Typography.scss';
+@import '../../../defaultStyles/MediaQueries.scss';
+
+.settings{
+    display: flex;
+    height: 100%;
+    &-left{
+        width: 25%;
+        height: 100%;
+        border-right: 1px solid #908d8d;
+        padding: 0;
+      }
+      &-right {
+      width: 75%;
+    }
+}

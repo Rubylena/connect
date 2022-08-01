@@ -1,0 +1,80 @@
+@import "../../defaultStyles/Colors.scss";
+@import "../../defaultStyles/Typography.scss";
+@import "../../defaultStyles/MediaQueries.scss";
+
+.faq__container {
+  max-width: $pageWidth;
+  margin: 3.1rem auto;
+  padding: 5px $base-padding;
+  //   margin-top: 3.1rem;
+
+  h2 {
+    margin-bottom: 36px;
+    color: $primaryColor;
+    @include CircularTheme(700, 23px, normal, 29.09px);
+  }
+  .sub__container {
+    display: grid;
+    grid-template-columns: 65% 30%;
+    justify-content: space-between;
+    gap: 10%;
+
+    .tab__open {
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      p {
+        cursor: pointer;
+        @include CircularTheme(700, 14px, normal, 17.71px);
+      }
+    }
+    .question {
+      p:first-child {
+        margin-bottom: 0.5rem;
+        color: rgba(21, 20, 57, 0.4);
+        @include CircularTheme(700, 14px, normal, 17.71px);
+        margin-bottom: 0.5rem;
+      }
+      p {
+        color: #19352a;
+        width: 70%;
+        @include CircularTheme(400, 13px, normal, 16.44px);
+      }
+    }
+  }
+  .tab__content {
+    color: #311f36;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    // border-bottom: 2px solid #ebeaed;
+    @include CircularTheme(400, 14px, normal, 17.71px);
+  }
+  .bottom__line {
+    border-bottom: 2px solid #ebeaed;
+    @include CircularTheme(400, 14px, normal, 17.71px);
+  }
+}
+
+@include desktop {
+  .faq__container {
+    .sub__container {
+      grid-template-columns: 1fr;
+      .find__loan {
+        display: flex;
+        justify-content: center;
+      }
+      .question {
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include phone {
+  .faq__container {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
